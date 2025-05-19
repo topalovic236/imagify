@@ -12,7 +12,7 @@ const Steps = () => {
         whileInView={{ opacity:1, y:0 }}
         viewpoer={{ once: true }}
         className="flex flex-col items-center justify-center my-32">
-            <h1 className="text-3xl sm:text-4xl font-semibold mb-2">How does PromptifyAI works</h1>
+            <h1 className="text-3xl sm:text-4xl font-semibold mb-2">How does Imagify work</h1>
 
             <p className="text-lg text-gray-600 mb-8">Transform Words Into Stunning Images</p>
         

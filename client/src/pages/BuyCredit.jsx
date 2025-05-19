@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { assets, plans } from "../assets/assets";
 import { AppContext } from '../context/AppContext';
 import { motion } from "framer-motion";
 
 const BuyCredit = () => {
 
-    const {user} = useContext(AppContext)
+    const {user} = useContext(AppContext);
+   
 
     return(
         <motion.div 
@@ -30,7 +31,7 @@ const BuyCredit = () => {
                 </div>
            ))} 
         </div>
-
+       
         </motion.div>
     )
 }

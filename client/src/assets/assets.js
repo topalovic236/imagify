@@ -62,21 +62,21 @@ export const testimonialsData = [
         name:'Donald Jackman',
         role:'Graphic Designer',
         stars:5,
-        text:`I've been using PromptifyAI for a while now and everything works perfect! .`
+        text:`I've been using IMagify for a while now and everything works perfect! .`
     },
     {
         image:profile_img_2,
         name:'Richard Nelson',
         role:'Content Creator',
         stars:4,
-        text:`Really creative and helpful application.`
+        text:`Really creative and helpful application.Thanks for this.`
     },
     {
         image:profile_img_2,
         name:'Michael Scott',
         role:'DevOps Engineer',
         stars:5,
-        text:`Great application.10/10!`
+        text:`Wonderful design and idea.Works greatly without any bugs.10/10!`
     },
 ]
 
