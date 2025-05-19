@@ -4,13 +4,24 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  build: {
+    outDir: '../dist', 
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: './index.html'
+        
+      }
+    }
+  },
+  publicDir: '../public', 
   plugins: [
-    react(),
+  
+    react({
+      jsxRuntime: 'classic',
+    }),
     tailwindcss(),
   ],
-  define: {
-    'import.meta.env.VITE_BACKEND_URL': JSON.stringify(process.env.VITE_BACKEND_URL)
-  }
+  
 })
 

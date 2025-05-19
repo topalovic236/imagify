@@ -14,7 +14,8 @@ const AppContextProvider = (props)=>{
     const [credit, setCredit] = useState(false);
 
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    console.log('Backend URL:', backendUrl);
     
     const navigate = useNavigate();
 
