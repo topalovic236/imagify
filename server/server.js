@@ -8,19 +8,26 @@ import imageRouter from './routes/imageRoutes.js';
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-
 app.use(express.json());
 app.use(cors({
     origin: [
       'https://imagifya.netlify.app',
     ],
     methods: ["GET", "POST", "PUT", "DELETE"]
-  }));
+}));
 
-await connectDB(); 
+async function startServer() {
+  try {
+    await connectDB();
 
-app.use('/api/user', userRouter);
-app.use('/api/image', imageRouter);
-app.get('/', (req, res) => res.send("API Working"));
+    app.use('/api/user', userRouter);
+    app.use('/api/image', imageRouter);
+    app.get('/', (req, res) => res.send("API Working"));
 
-app.listen(PORT, () => console.log(`Server running on PORT: ${PORT}`));
+    app.listen(PORT, () => console.log(`Server running on PORT: ${PORT}`));
+  } catch (error) {
+    console.error("Failed to start server:", error);
+  }
+}
+
+startServer();
