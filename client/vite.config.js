@@ -14,9 +14,7 @@ export default defineConfig({
   },
   publicDir: 'public',
   plugins: [
-    react({
-      jsxRuntime: 'classic',
-    }),
+    react(),
     tailwindcss(),
   ],
 })
